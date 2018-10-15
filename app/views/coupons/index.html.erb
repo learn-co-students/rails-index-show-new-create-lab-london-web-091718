@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Coupon Page</title>
+  </head>
+  <body>
+  <h1>Welcome to the coupon page</h1>
+
+  <% @coupons.each do |coupon| %>
+
+  <p><%= "Your coupon code is #{coupon.coupon_code}. This code is valid at the #{coupon.store} store." %></p>
+  <p><%= link_to coupon.coupon_code, coupon_path(coupon.id) %></p>
+  <% end %>
+
+
+
+
+  </body>
+</html>
