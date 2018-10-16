@@ -1,0 +1,23 @@
+<!-- <form>
+  <label>Coupon code:</label><br>
+  <input type="text" id="coupon_code" name="coupon[code]"><br>
+
+  <label>Coupon store:</label><br>
+  <input type="text" id="coupon_store" name="coupon[store]"<br>
+
+  <input type= "submit" value="Submit Coupon">
+</form>
+
+<%= params.inspect %> -->
+
+<%= form_tag coupons_path do %>
+<label>Coupon Form:</label><br>
+
+  <label>Coupon Code:</label><br>
+  <%= text_field_tag :"coupon[coupon_code]" %><br>
+
+  <label>Coupon Store:</label><br>
+  <%= text_field_tag :"coupon[store]" %><br>
+  <%= submit_tag "Submit Coupon" %>
+
+<% end %>
